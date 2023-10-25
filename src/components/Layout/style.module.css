@@ -1,4 +1,14 @@
 .layout {
   display: grid;
-  grid-template-rows: 5rem auto;
+  grid-template-rows: 3rem auto;
+  height: 100vh;
+}
+
+.wrapper {
+  overflow: auto;
+}
+
+.content {
+  margin: 1rem 5rem;
+  max-width: 1170px;
 }

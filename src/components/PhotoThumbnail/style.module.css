@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  border-radius: 0.25rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  transform: scale(1.02);
+}
+
+.img {
+  height: 10rem;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}

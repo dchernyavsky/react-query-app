@@ -1,8 +1,9 @@
 .header {
-  background-color: darkgreen;
-  color: blanchedalmond;
+  box-shadow: var(--box-shadow);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 2rem;
+  padding: 0 5rem;
+  max-width: 1170px;
 }

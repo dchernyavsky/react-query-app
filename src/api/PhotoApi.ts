@@ -1,11 +1,11 @@
-import config from "../../config.json";
+import config from "../config.json";
 
 class PhotoApi {
-  private photoUrl = `${config.URL}/photo`;
-  private photosUrl = `${config.URL}/photos`;
+  private photoUrl = `${config.URL}/photo/`;
+  private photosUrl = `${config.URL}/photos?albumId=`;
 
   async getPhotos(page: number) {
-    const data = await fetch(`${this.photosUrl}/${page}`);
+    const data = await fetch(`${this.photosUrl}${page}`);
     const photo = await data.json();
     return photo;
   }
