@@ -5,14 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --shadow: gray;
-  --box-shadow: 0 0 0.5rem var(--shadow);
+  --shadow-color: gray;
+  --text-color: black;
+  --box-shadow: 0 0 0.5rem var(--shadow-color);
+  color: var(--text-color);
 }
 
 .dark {
   background-color: #183d3d;
-  color: white;
-  --shadow: black;
+  --text-color: white;
+  --shadow-color: black;
 }
 
 code {

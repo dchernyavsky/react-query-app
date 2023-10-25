@@ -19,7 +19,7 @@ export const usePhotos = () => {
   const { ref: fetchNextRef, inView: fetchNextInView } = useInView();
 
   React.useEffect(() => {
-    if (fetchNextInView && !query.isFetching) {
+    if (fetchNextInView) {
       query.fetchNextPage();
     }
   }, [fetchNextInView]);

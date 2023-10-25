@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 10rem;
+  height: 13rem;
   border-radius: 0.25rem;
   box-shadow: var(--box-shadow);
   overflow: hidden;
@@ -19,5 +20,10 @@
 
 .title {
   font-size: 0.75rem;
-  padding: 0.5rem;
+  margin: 0.5rem;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }

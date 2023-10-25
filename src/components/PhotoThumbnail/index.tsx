@@ -8,11 +8,7 @@ interface IProps {
 export const PhotoThumbnail: React.FC<IProps> = ({ photo }) => {
   return (
     <div className={styles.wrapper}>
-      <img
-        src={photo.thumbnailUrl}
-        className={styles.img}
-        alt={photo.title}
-      ></img>
+      <img src={photo.thumbnailUrl} className={styles.img} alt={photo.title} />
       <div className={styles.title}>{photo.title}</div>
     </div>
   );
