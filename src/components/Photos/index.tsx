@@ -11,8 +11,12 @@ export const Photos: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       {data?.pages?.flat().map((photo) => (
-        <NavLink className={styles.link} to={`${ROUTE_PATH.PHOTO}/${photo.id}`}>
-          <PhotoThumbnail key={photo.id} photo={photo} />
+        <NavLink
+          key={photo.id}
+          className={styles.link}
+          to={`${ROUTE_PATH.PHOTO}/${photo.id}`}
+        >
+          <PhotoThumbnail photo={photo} />
         </NavLink>
       ))}
       <div ref={fetchNextRef} />
