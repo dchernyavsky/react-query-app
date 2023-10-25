@@ -4,8 +4,10 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 export const ToggleDarkMode: React.FC = () => {
   const darkModeClassName = "dark";
   const [isDarkMode, setIsDarkMode] = React.useState(
-    document.body.classList.contains(darkModeClassName)
+    Boolean(window.matchMedia) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
   );
+
   const toggleDarkMode = (checked: boolean) => {
     setIsDarkMode(checked);
     if (checked) {
@@ -14,6 +16,10 @@ export const ToggleDarkMode: React.FC = () => {
       document.body.classList.remove(darkModeClassName);
     }
   };
+
+  React.useEffect(() => {
+    toggleDarkMode(isDarkMode);
+  }, []);
 
   return (
     <div>
