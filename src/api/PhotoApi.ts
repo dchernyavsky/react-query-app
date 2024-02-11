@@ -1,10 +1,12 @@
-import config from "../config.json";
-
-const URL = process.env.REACT_APP_URL || config.URL;
+const REACT_APP_URL = process.env.REACT_APP_URL;
+const API_PORT = process.env.REACT_APP_API_PORT || 4000;
+const API_URL =
+  REACT_APP_URL ||
+  `${window.location.protocol}//${window.location.hostname}:${API_PORT}`;
 
 class PhotoApi {
-  private photoUrl = `${URL}/photos/`;
-  private photosUrl = `${URL}/photos?albumId=`;
+  private photoUrl = `${API_URL}/photos/`;
+  private photosUrl = `${API_URL}/photos?albumId=`;
 
   async getPhotos(page: number) {
     const data = await fetch(`${this.photosUrl}${page}`);
